@@ -4,7 +4,7 @@
       <div class="card-header card-header-danger">
         <h4 class="card-title">Ordenes De Gasto</h4>
         <p class="card-category">
-          Sistema para generar ordesnes de pagos ESPE.
+          Sistema para generar órdenes de pagos ESPE.
         </p>
         <div class="row">
           <div class="subitem col-lg-6 rowup col-md-3 col-sm-3"></div>
@@ -38,7 +38,7 @@
                       <input [(ngModel)]="OrdenGasto" ORDGA_RUC="ngModel" type="number" id="Ruc" name="Ruc"
                         placeholder="Ruc" mainlength="15" maxlength="100 " class="form-control" size="25" required />
                       <div *ngIf="Ruc.touched &&  !Ruc.valid">
-                        <div *ngIf="Ruc.errors.required">Numero de Ruc es requerido</div>
+                        <div *ngIf="Ruc.errors.required">Número de Ruc es requerido</div>
                         <div *ngIf="Ruc.errors.minlength">Ruc debe ser de al menos
                           {{Ruc.errors.minlength.requiredLength}}caractres.</div>
                       </div>
@@ -49,7 +49,7 @@
                       <input [(ngModel)]="OrdGFive" #OrdG="ngModel" type="text" id="OrdG" name="OrdG"
                         placeholder="Orden de Gasto" mainlength="15" maxlength="100 " class="form-control" size="25" required />
                       <div *ngIf="OrdG.touched &&  !OrdG.valid">
-                        <div *ngIf="OrdG.errors.required">Numero de OrdG es requerido</div>
+                        <div *ngIf="OrdG.errors.required">Número de OrdG es requerido</div>
                         <div *ngIf="OrdG.errors.minlength">OrdG debe ser de al menos
                           {{OrdG.errors.minlength.requiredLength}}caractres.</div>
                       </div>
@@ -77,14 +77,14 @@
                             <input [(ngModel)]="OrdenOne" #Orden="ngModel" type="number" id="Orden" name="Orden"
                               placeholder="Orden" mainlength="15" maxlength="100 " class="form-control" size="10" required />
                             <div *ngIf="Orden.touched &&  !Orden.valid">
-                              <div *ngIf="Orden.errors.required">Numero de Orden es requerido</div>
+                              <div *ngIf="Orden.errors.required">Número de Orden es requerido</div>
                               <div *ngIf="Orden.errors.minlength">Orden debe ser de al menos
                                 {{Orden.errors.minlength.requiredLength}}caractres.</div>
                             </div>
                           </th>
     
                           <th>
-                              Descripcion
+                              Descripción
                               <input [(ngModel)]="DescripcionTwo" #Descripcion="ngModel" type="text" id="Descripcion" name="Descripcion" placeholder="Descripcion"
                                  mainlength="15" maxlength="666" class="form-control" size="80" required />
                               <div *ngIf="Descripcion.touched &&  !Descripcion.valid">
@@ -99,7 +99,7 @@
                               <input [(ngModel)]="CantidadSix" #Cantidad="ngModel" type="number" id="Cantidad" name="Cantidad"
                                 placeholder="Cantidad" mainlength="15" maxlength="100 " class="form-control" size="10" required />
                               <div *ngIf="Cantidad.touched &&  !Cantidad.valid">
-                                <div *ngIf="Cantidad.errors.required">Numero de Cantidad es requerido</div>
+                                <div *ngIf="Cantidad.errors.required">Número de Cantidad es requerido</div>
                                 <div *ngIf="Cantidad.errors.minlength">Cantidad debe ser de al menos
                                   {{Cantidad.errors.minlength.requiredLength}}caractres.</div>
                               </div>
@@ -111,7 +111,7 @@
                               <input [(ngModel)]="PreUniSaven" #PreUni="ngModel" type="number" id="PreUni" name="PreUni"
                                 placeholder="Precio Unitario" mainlength="15" maxlength="100 " class="form-control" size="10" required />
                               <div *ngIf="PreUni.touched &&  !PreUni.valid">
-                                <div *ngIf="PreUni.errors.required">Numero de Precio Unitario es requerido</div>
+                                <div *ngIf="PreUni.errors.required">Número de Precio Unitario es requerido</div>
                                 <div *ngIf="PreUni.errors.minlength">PreUni debe ser de al menos
                                   {{PreUni.errors.minlength.requiredLength}}caractres.</div>
                               </div>
@@ -145,6 +145,7 @@
                             </div>
                        </th>                      
                        <button type="button" class="btn btn-success">Guardar</button>
+                       <button type="button" class="btn btn-danger">Cancelar</button>
   </div>
   </form>
   
