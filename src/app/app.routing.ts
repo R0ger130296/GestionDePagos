@@ -1,0 +1,37 @@
+import { NgModule } from '@angular/core';
+import { CommonModule, } from '@angular/common';
+import { BrowserModule } from '@angular/platform-browser';
+import { Routes, RouterModule } from '@angular/router';
+
+import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
+import { LoginComponent } from './login/login.component';
+import { InicioComponent } from './inicio/inicio.component';
+import { CancelarModule } from './cancelar/cancelar.module';
+import { CancelarComponent } from './cancelar/cancelar.component';
+import { FaqComponent } from './faq/faq.component';
+import { HomeComponent } from './home/home.component';
+
+const routes: Routes = [
+  { path: '', redirectTo: 'login',  pathMatch: 'full', },
+  // { path: '', component: AdminLayoutComponent, children: [
+  //     {path: '', loadChildren: './layouts/admin-layout/admin-layout.module#AdminLayoutModule'
+  //     }],
+  // }
+  { path:'login', component: LoginComponent },
+  { path:'home', component: HomeComponent },
+  { path:'inicio', component: InicioComponent },
+  { path:'cancelar', component: CancelarComponent },
+  { path:'faq', component: FaqComponent }
+];
+
+@NgModule({
+  imports: [
+    CommonModule,
+    BrowserModule,
+    RouterModule.forRoot(routes, { useHash: true })
+  ],
+  exports: [
+    RouterModule
+  ],
+})
+export class AppRoutingModule { }
