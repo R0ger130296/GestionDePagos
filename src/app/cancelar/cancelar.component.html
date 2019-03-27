@@ -35,7 +35,7 @@
 
                     <th>
                       Ruc
-                      <input [(ngModel)]="OrdenGasto" ORDGA_RUC="ngModel" type="number" id="Ruc" name="Ruc"
+                      <input [(ngModel)]="OrdenGasto" ORDGA_RUC="ngModel" type="number" id="Ruc" name="Ruc"  min="1" pattern="^[0-9]+"
                         placeholder="Ruc" mainlength="15" maxlength="100 " class="form-control" size="25" required />
                       <div *ngIf="Ruc.touched &&  !Ruc.valid">
                         <div *ngIf="Ruc.errors.required">Número de Ruc es requerido</div>
@@ -74,7 +74,7 @@
 
                          <th>
                             Orden
-                            <input [(ngModel)]="OrdenOne" #Orden="ngModel" type="number" id="Orden" name="Orden"
+                            <input [(ngModel)]="OrdenOne" #Orden="ngModel" type="number" id="Orden" name="Orden"  min="1" pattern="^[0-9]+"
                               placeholder="Orden" mainlength="15" maxlength="100 " class="form-control" size="10" required />
                             <div *ngIf="Orden.touched &&  !Orden.valid">
                               <div *ngIf="Orden.errors.required">Número de Orden es requerido</div>
@@ -96,7 +96,7 @@
 
                           <th>
                               Cantidad
-                              <input [(ngModel)]="CantidadSix" #Cantidad="ngModel" type="number" id="Cantidad" name="Cantidad"
+                              <input [(ngModel)]="CantidadSix" #Cantidad="ngModel" type="number" id="Cantidad" name="Cantidad"  min="1" pattern="^[0-9]+"
                                 placeholder="Cantidad" mainlength="15" maxlength="100 " class="form-control" size="10" required />
                               <div *ngIf="Cantidad.touched &&  !Cantidad.valid">
                                 <div *ngIf="Cantidad.errors.required">Número de Cantidad es requerido</div>
@@ -108,7 +108,7 @@
                           
                           <th>
                               Precio Unitario
-                              <input [(ngModel)]="PreUniSaven" #PreUni="ngModel" type="number" id="PreUni" name="PreUni"
+                              <input [(ngModel)]="PreUniSaven" #PreUni="ngModel" type="number" id="PreUni" name="PreUni"  min="1" pattern="^[0-9]+"
                                 placeholder="Precio Unitario" mainlength="15" maxlength="100 " class="form-control" size="10" required />
                               <div *ngIf="PreUni.touched &&  !PreUni.valid">
                                 <div *ngIf="PreUni.errors.required">Número de Precio Unitario es requerido</div>
@@ -125,7 +125,7 @@
 
                           <th>
                               IVA
-                              <input [(ngModel)]="textoIva" #iva="ngModel" type="number" id="IVA" name="IVA" placeholder="IVA"
+                              <input [(ngModel)]="textoIva" #iva="ngModel" type="number" id="IVA" name="IVA" placeholder="IVA"  min="1" pattern="^[0-9]+"
                                 mainlength="15" maxlength="666" class="form-control" size="25" required />
                               <div *ngIf="iva.touched &&  !iva.valid">
                                 <div *ngIf="iva.errors.required">Iva es necesario</div>
@@ -136,7 +136,7 @@
 
                          <th>
                             Otros Impuestos
-                            <input [(ngModel)]="textoOtrImp" #OtrImp="ngModel" type="number" id="OtrImp" name="OtrImp" placeholder="Otros Impuestos"
+                            <input [(ngModel)]="textoOtrImp" #OtrImp="ngModel" type="number" id="OtrImp" name="OtrImp" placeholder="Otros Impuestos"  min="1" pattern="^[0-9]+"
                               mainlength="15" maxlength="666" class="form-control" size="25" required />
                             <div *ngIf="OtrImp.touched &&  !OtrImp.valid">
                               <div *ngIf="OtrImp.errors.required">Iva es necesario</div>
@@ -145,7 +145,8 @@
                             </div>
                        </th>                      
                        <button type="button" class="btn btn-success">Guardar</button>
-                       <button type="button" class="btn btn-danger">Cancelar</button>
+                      
+                       <button type="button" class="btn btn-danger" >Cancelar  </button>
   </div>
   </form>
   
